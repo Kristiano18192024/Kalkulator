@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Kalkulator</title>
+ </head>
+ <body>
+   <center>
+   <input type="text" placeholder="Angka Pertama" id="A_1">
+   <br>
+   <input type="text" placeholder="Angka Kedua" id="A_2">
+   <br>
+   <div class="hasil" id="hasil">
+     
+   </div>
+   <br>
+   <button type="submit" onclick="tambah()">+</button>
+   <button type="submit" onclick="kurang()">-</button>
+   <button type="submit" onclick="kali()">x</button>
+   <button type="submit" onclick="bagi()">/</button>
+   </center>
+   <script>
+     function tambah() {
+       var angkaPertama = document.getElementById('A_1');
+    var angkaKedua = document.getElementById('A_2');
+       var A_1 = parseFloat(angkaPertama.value);
+       var A_2 = parseFloat(angkaKedua.value);
+       var hasil = A_1 + A_2;
+       document.getElementById('hasil').textContent = hasil;
+     }
+
+     function kurang() {
+       var angkaPertama = document.getElementById('A_1');
+       var angkaKedua = document.getElementById('A_2');
+       var A_1 = parseFloat(angkaPertama.value);
+       var A_2 = parseFloat(angkaKedua.value);
+       var hasil = A_1 - A_2;
+       document.getElementById('hasil').textContent = hasil;
+     }
+     function kali() {
+       var angkaPertama = document.getElementById('A_1');
+       var angkaKedua = document.getElementById('A_2');
+       var A_1 = parseFloat(angkaPertama.value);
+       var A_2 = parseFloat(angkaKedua.value);
+       var hasil = A_1 * A_2;
+       document.getElementById('hasil').textContent = hasil;
+     }
+     function bagi() {
+       var angkaPertama = document.getElementById('A_1');
+       var angkaKedua = document.getElementById('A_2');
+       var A_1 = parseFloat(angkaPertama.value);
+       var A_2 = parseFloat(angkaKedua.value);
+       var hasil = A_1 / A_2;
+       document.getElementById('hasil').textContent = hasil;
+     }
+   </script>
+ </body>
+</html>
